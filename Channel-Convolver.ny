@@ -24,12 +24,8 @@
 
 ; convolve and output as (two channel monoaural) vector
 (if (arrayp s) ; check for stereo track
-	(vector
 		(convolve
 			(mult (aref s 0)(nth 0 channels))
 			(mult (aref s 1)(nth 1 channels)))
-		(convolve
-			(mult (aref s 0)(nth 0 channels))
-			(mult (aref s 1)(nth 1 channels))))
 ; or error if not stereo
 	(format NIL "Error\nChannel Convolver convolves stereo channels"))
