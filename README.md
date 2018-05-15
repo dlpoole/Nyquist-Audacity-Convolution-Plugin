@@ -3,6 +3,7 @@
 This plug-in convolves the two channels of a selection from a stereo track.  The convolution overwrites both channels of the source  track.  A typical application is for one channel to contain a monaural audio sample and the other an impulse response representing a reverberant environment into which it is to be placed.
 
 There are SIGNIFICANT limitations:
+
 Audacity imposes a memory limit on the Nyquist convolve function; experimentally, this results in a 20 second limit on the selection at 48KHz sample rate.  Attempts to convolve longer selections will throw a table limit error that will be found in the Debug window.
 
 Audacity applies a common selection to both channels of a stereo track and delivers them as inputs to convolve. It will probably be necessary to prepare a monaural track of the impulse response (post-padded with silence if necessary) and a second monaural track of the desired audio from which to make a stereo track to convolve.
