@@ -14,6 +14,4 @@ This plugin took 8 minutes to convolve a 10-second audio selection and impulse f
 
 Convolution is subject to overflow, so you may wish to set the input coefficients to 50%, convolve a short but high amplitude portion of your source material, and select lower input coefficients to avoid clipping before you commit to a 15-minute run. You can always UNDO a clipped result to get your raw material back for another try.  Attempts to convolve a monaural track, convolve between tracks, or convolve selections with unmatched sample rates will also throw an error.
 
-Audacity forces both the sample and impulse to the length of the selection, so the convolved track will have twice the length of the original selection so as to contain the "tail" of the impulse response. 
-
-It is wise to make safety WAV copies of your source materials before using this or any other effect or filter as doing so can cause Audacity to crash.
+Audacity forces both the sample and impulse to the length of the selection, so the convolved track will have twice the length of the original selection and will overwrite beyond it so as to contain the "tail" of the impulse response. 
