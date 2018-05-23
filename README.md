@@ -8,7 +8,7 @@ There are SIGNIFICANT limitations:
 
 Audacity imposes a memory limit on the Nyquist convolve function; experimentally, this results in a 20 second limit on the selection at 48KHz sample rate.  Attempts to convolve longer selections will throw a table limit error that will be found in the Debug window.
 
-Audacity applies a common selection to both channels of a stereo track and delivers them as inputs to convolve. It will probably be necessary to prepare a monaural track of the impulse response (post-padded with silence if necessary) and a second monaural track of the desired audio from which to make a stereo track to convolve. It is very strongly recommended that the user make safety WAV copies of any work before they press OK on this or any other effect or filter.
+Audacity applies a common selection to both channels of a stereo track and delivers them as inputs to convolve. It will probably be necessary to prepare a monaural track of the impulse response (post-padded with silence if necessary) and a second monaural track of the desired audio from which to make a stereo track to convolve. It is wise to make backup WAV copies of the source naterials before pressing OK on this or any other effect or filter lest it cause Audacity to crash.
 
 This plugin took 8 minutes to convolve a 10-second audio selection and impulse function at 48KHz sampling rate with Audacity v.2.2.1 on a Dell laptop with an i7-5600U CPU.  Nyquist v.3.12 reportedly has a new "fast convolution" primitive which is capable of convolution in near real-time and which may be incorporated into future versions of Audacity.
 
